@@ -204,6 +204,9 @@ extension PresentrController {
         
         presentedViewFrame.size = size
         presentedViewFrame.origin = origin
+        
+        let newOrigin = CGPoint(x: origin.x, y: containerFrame.maxY - size.height)
+        presentedViewFrame.origin = newOrigin
 
         return presentedViewFrame
     }
