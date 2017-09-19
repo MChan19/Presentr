@@ -63,7 +63,7 @@ public enum ModalSize {
         case .default:
             return floorf(Float(parentSize.height) * PresentrConstants.Values.defaultHeightPercentage)
         case .half:
-            return floorf(Float(parentSize.height) / 1.5)
+            return floorf(Float(parentSize.height) / 1.4)
         case .full:
             return Float(parentSize.height)
         case .custom(let size):
