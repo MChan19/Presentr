@@ -63,7 +63,13 @@ public enum ModalSize {
         case .default:
             return floorf(Float(parentSize.height) * PresentrConstants.Values.defaultHeightPercentage)
         case .half:
-            return floorf(Float(parentSize.height) / 1.4)
+            let screenRect = UIScreen.main.applicationFrame
+            
+            if screenRect.size.height == 568 {
+                return floorf(Float(parentSize.height) / 1.2)
+            } else {
+                return floorf(Float(parentSize.height) / 1.4)
+            }
         case .full:
             return Float(parentSize.height)
         case .custom(let size):
