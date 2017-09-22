@@ -65,7 +65,7 @@ public enum ModalSize {
         case .half:
             let screenRect = UIScreen.main.applicationFrame
             
-            if screenRect.size.height == 568 {
+            if screenRect.size.height <= 568 {
                 return floorf(Float(parentSize.height) / 1.2)
             } else {
                 return floorf(Float(parentSize.height) / 1.4)
